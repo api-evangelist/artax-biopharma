@@ -1,23 +1,83 @@
 aid: artax-biopharma
+
 name: Artax Biopharma
-description: 'Artax Biopharma is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://artaxbiopharma.com/wp-content/uploads/2024/06/Default-Social-Image.jpg
+
+description: Artax Biopharma is a Phase 2 clinical-stage biotechnology company dedicated to developing safe and effective treatments for autoimmune
+  diseases. Their approach modulates T cell activation through Signal 1, aiming to prevent self-activation without causing immune suppression.
+  The company has a pipeline of first‑in‑class Nck modulator candidates, with lead program AX‑158 showing promising biomarker and clinical data.
+
 url: https://raw.githubusercontent.com/api-evangelist/artax-biopharma/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: Documentation pages return 403 errors, preventing machine-readable access.
+  evidence:
+  - url: https://artaxbiopharma.com/our-pipeline-and-progress/
+    status: 403
+  checked: 2026-09-26
+
 tags:
-- Company
-apis: []
+- Biotechnology
+- Clinical-stage
+- Autoimmune
+- Immunomodulation
+- Nck-modulators
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/artax-biopharma-hosts.yml
+- type: Blog
+  url: https://artaxbiopharma.com/blog/
+- type: DomainSecurity
+  url: security/artax-biopharma-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://artaxbiopharma.com
+- type: Documentation
+  url: https://artaxbiopharma.com/our-pipeline-and-progress/
+- type: About
+  url: https://artaxbiopharma.com/about-artax/
+- type: Resources
+  url: https://artaxbiopharma.com/resources/
+- type: PressReleases
+  url: https://artaxbiopharma.com/press-releases/
+- type: Contact
+  url: https://artaxbiopharma.com/contact-us/
+- type: TermsOfService
+  url: https://artaxbiopharma.com/terms-of-use/
+- type: PrivacyPolicy
+  url: https://artaxbiopharma.com/privacy-policy/
+
+apis:
+- name: Artax Biopharma API
+  description: Artax Biopharma provides data on its pipeline and progress via a developer portal.
+  humanURL: https://artaxbiopharma.com/our-pipeline-and-progress/
+  baseURL: null
+  aid: artax-biopharma:artax-biopharma-api
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 4
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
